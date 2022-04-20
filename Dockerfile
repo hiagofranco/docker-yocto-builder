@@ -2,8 +2,6 @@
 ## Docker file to build a container that compiles
 ## new linux distros using Yocto
 
-## Inpired by B2Open training, by Cleiton Bueno: https://www.b2open.com/
-
 # Use this command to run:
 # docker run --rm -it --privileged -v ~/Projects/poky/:/home/yocto/poky -v /tmp:/tmp -v /etc/localtime:/etc/localtime --hostname linux --name yocto hiagofranco/yocto-builder:latest /bin/bash
 
