@@ -2,17 +2,17 @@
 ## Docker file to build a container that compiles
 ## new linux distros using Yocto
 
+## Inpired by B2Open training, by Cleiton Bueno: https://www.b2open.com/
+
 # Use this command to run:
 # docker run --rm -it --privileged -v ~/Projects/poky/:/home/yocto/poky -v /tmp:/tmp -v /etc/localtime:/etc/localtime --hostname linux --name yocto hiagofranco/yocto-builder:latest /bin/bash
 
 
 # Yocto Project 3.1 - dunfell (works with ubuntu 20.04)
 FROM ubuntu:20.04
-
-# Does prevent interactive questions on apt operations
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Install necessary packages
+# Install necessary packages (Yocto documentation)
 RUN apt-get update && \
     apt-get install --no-install-recommends -y \
     gawk \
