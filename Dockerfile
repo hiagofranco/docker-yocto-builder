@@ -40,10 +40,14 @@ RUN apt-get update && \
     mesa-common-dev \
     zstd \
     liblz4-tool \
+    \
     vim \
     locales \
     sudo \
-    file \ 
+    file \
+    ssh \
+    python \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
 # Set locale and language
