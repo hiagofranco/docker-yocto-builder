@@ -48,6 +48,8 @@ RUN apt-get update && \
     ssh \
     python \
     curl \
+    libncurses-dev \
+    tmux \
     && rm -rf /var/lib/apt/lists/*
 
 # Set locale and language
