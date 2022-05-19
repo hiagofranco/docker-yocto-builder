@@ -3,7 +3,7 @@
 ## new linux distros using Yocto
 
 # Use this command to run:
-# docker run --rm -it --privileged -v ~/Projects/poky/:/home/yocto/poky -v /tmp:/tmp -v /etc/localtime:/etc/localtime --hostname linux -e DISPLAY=:1 --name yocto hiagofranco/yocto-builder:latest /bin/bash
+# docker run --rm -it --privileged -v ~/Projects/poky/:/home/yocto/poky -v /tmp:/tmp -v /etc/localtime:/etc/localtime --hostname linux -e DISPLAY=$DISPLAY --name yocto hiagofranco/yocto-builder:latest /bin/bash
 
 
 # Yocto Project 3.1 - dunfell (works with ubuntu 20.04)
