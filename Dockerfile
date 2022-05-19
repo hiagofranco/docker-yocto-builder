@@ -50,6 +50,7 @@ RUN apt-get update && \
     curl \
     libncurses-dev \
     tmux \
+    tree \
     && rm -rf /var/lib/apt/lists/*
 
 # Set locale and language
