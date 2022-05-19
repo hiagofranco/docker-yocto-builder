@@ -35,12 +35,13 @@ RUN apt-get update && \
     libegl1-mesa \
     libsdl1.2-dev \
     pylint3 \
+    python3-gi \
     xterm \
     python3-subunit \
     mesa-common-dev \
     zstd \
     liblz4-tool \
-    \
+    tree \
     vim \
     locales \
     sudo \
