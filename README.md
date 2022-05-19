@@ -7,7 +7,7 @@ docker pull hiagofranco/yocto-builder:latest
 ```
 * How to build:
 ```
-docker build . -t hiagofranco/yocto-builder
+docker build . -t yocto-builder
 ```
 * How to run:
 ```
