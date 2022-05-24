@@ -3,7 +3,7 @@
 ## new linux distros using Yocto
 
 # Use this command to run:
-# docker run --rm -it --privileged -v ~/Projects/poky/:/home/yocto/poky -v /tmp:/tmp -v /etc/localtime:/etc/localtime --hostname linux --name yocto hiagofranco/yocto-builder:latest /bin/bash
+# docker run --rm -it --privileged -v ~/Projects/poky/:/home/yocto/poky -v /tmp:/tmp -v /etc/localtime:/etc/localtime --hostname linux -e DISPLAY=$DISPLAY --name yocto hiagofranco/yocto-builder:latest /bin/bash
 
 
 # Yocto Project 3.1 - dunfell (works with ubuntu 20.04)
@@ -35,12 +35,14 @@ RUN apt-get update && \
     libegl1-mesa \
     libsdl1.2-dev \
     pylint3 \
+    python3-gi \
+    libgtk-3-dev \
     xterm \
     python3-subunit \
     mesa-common-dev \
     zstd \
     liblz4-tool \
-    \
+    tree \
     vim \
     locales \
     sudo \
