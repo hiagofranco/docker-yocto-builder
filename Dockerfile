@@ -42,7 +42,7 @@ RUN apt-get update && \
     mesa-common-dev \
     zstd \
     liblz4-tool \
-    tree \
+    \
     vim \
     locales \
     sudo \
