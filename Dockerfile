@@ -53,6 +53,7 @@ RUN apt-get update && \
     libncurses-dev \
     tmux \
     tree \
+    ripgrep \
     && rm -rf /var/lib/apt/lists/*
 
 # Set locale and language
