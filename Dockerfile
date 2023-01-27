@@ -77,4 +77,7 @@ ENV BUILD_DIR /home/${USER_NAME}
 RUN mkdir -p $BUILD_DIR
 WORKDIR $BUILD_DIR
 
+# Colored terminal
+ENV TERM=xterm-256color
+
 ENTRYPOINT [ "/bin/bash" ]
