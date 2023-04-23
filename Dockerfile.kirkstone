@@ -63,14 +63,16 @@ RUN groupadd -g $host_gid $USER_NAME && useradd -g $host_gid -m -s /bin/bash -u 
 RUN echo 'kirkstone:linux' | chpasswd
 RUN adduser $USER_NAME sudo
 RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
-USER $USER_NAME
 
 # Create work folder
 ENV BUILD_DIR /home/${USER_NAME}
 RUN mkdir -p $BUILD_DIR
 WORKDIR $BUILD_DIR
 
-# Colored terminal
-ENV TERM=xterm-256color
+# Copy settings
+COPY tmux.conf ${BUILD_DIR}/.tmux.conf
+COPY entrypoint.sh ${BUILD_DIR}/entrypoint.sh
+RUN chmod +x ${BUILD_DIR}/entrypoint.sh
 
-ENTRYPOINT [ "/bin/bash" ]
+USER $USER_NAME
+CMD ["./entrypoint.sh"]

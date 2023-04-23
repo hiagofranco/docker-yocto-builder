@@ -1,17 +1,23 @@
+
 ## Docker Yocto Builder
-Dockerfile which describes a container capable of building Yocto Images. Note: You need to download Poky in order to build an image using Yoto. Refer to Yocto documentation on how to do it.
-* Working with Yocto Dunfell or later (uses ubuntu 20.04 image).
-* If you don't want to build it, you can download my image from docker Hub:
-```
-docker pull hiagofranco/yocto-builder:latest
-```
+
+Dockerfile's which describes a container capable of building Yocto Images. 
+
+* Working with Yocto Rocko, Dunfell and Kirkstone.
+
 * How to build:
+
+```shell
+docker build -t yocto-rocko -f Dockerfile.rocko .
+docker build -t yocto-dunfell -f Dockerfile.dunfell .
+docker build -t yocto-kirkstone -f Dockerfile.kirkstone .
 ```
-docker build . -t yocto-builder
-```
+
 * How to run:
+
+```shell
+docker run --rm -it --privileged -v <my-folder-project>:/home/yocto/poky -v /tmp:/tmp -v /etc/localtime:/etc/localtime yocto-<version>:latest
 ```
-docker run --rm -it --privileged -v ~/Projects/poky/:/home/yocto/poky -v /tmp:/tmp -v /etc/localtime:/etc/localtime --hostname linux --name yocto hiagofranco/yocto-builder:latest /bin/bash
-```
-Note: replace "Projects" folder and the name of your image with whatever you want.
-* Inspired by B2Open training: https://www.b2open.com/
+
+Note: Replace <my-folder-project> with the folder where all the Yocto files are (like Poky, for example) and <version> with rocko, dunfell or kirkstone.
+
