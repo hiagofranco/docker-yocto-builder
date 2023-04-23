@@ -21,3 +21,5 @@ docker run --rm -it --privileged -v <my-folder-project>:/home/yocto/poky -v /tmp
 
 Note: Replace <my-folder-project> with the folder where all the Yocto files are (like Poky, for example) and <version> with rocko, dunfell or kirkstone.
 
+If you want a ncurses menu to select the right container, there is an example on `menu_entry.sh` script.
+
