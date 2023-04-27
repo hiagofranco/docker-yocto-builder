@@ -37,16 +37,17 @@ RUN apt-get update && \
     zstd \
     liblz4-tool \
     \
-    vim \
-    locales \
-    sudo \
-    file \
-    ssh \
     curl \
+    dialog \
+    file \
     libncurses-dev \
+    locales \
+    ripgrep \
+    ssh \
+    sudo \
     tmux \
     tree \
-    ripgrep \
+    vim \
     && rm -rf /var/lib/apt/lists/*
 
 # Set locale and language
