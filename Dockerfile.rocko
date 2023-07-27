@@ -61,6 +61,7 @@ WORKDIR $BUILD_DIR
 
 # Copy settings
 COPY tmux.conf ${BUILD_DIR}/.tmux.conf
+COPY vimrc ${BUILD_DIR}/.vimrc
 COPY entrypoint.sh ${BUILD_DIR}/entrypoint.sh
 RUN chmod +x ${BUILD_DIR}/entrypoint.sh
 
