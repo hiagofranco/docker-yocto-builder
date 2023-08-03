@@ -23,3 +23,4 @@ Note: Replace <my-folder-project> with the folder where all the Yocto files are 
 
 If you want a ncurses menu to select the right container, there is an example on `menu_entry.sh` script.
 
+Available containers at https://hub.docker.com/repositories/hiagofranco.
