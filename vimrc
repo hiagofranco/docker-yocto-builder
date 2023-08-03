@@ -1,2 +1,2 @@
 set number
-set colorscheme darkblue
+colorscheme desert
