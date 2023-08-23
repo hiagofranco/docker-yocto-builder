@@ -4,11 +4,6 @@
 FOLDER=$(find $BUILD_DIR -maxdepth 1 -type d | grep -v ${BUILD_DIR}$ | head -n 1)
 cd "$FOLDER"
 
-# If there is a export file, source it
-if [ -e "${FOLDER}/export" ]; then
-	source "${FOLDER}/export"
-fi
-
 # Copy bash history, if it exists from previous sessions
 if [ -e "${FOLDER}/.bash_history" ]; then
 	cp ${FOLDER}/.bash_history ~/
